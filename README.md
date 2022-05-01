@@ -1,6 +1,8 @@
 # fogex
 
-Form Regex
+### Form Regex
+
+Quickly and easily check if the content is valid
 
 ## Installation
 
@@ -8,10 +10,16 @@ Form Regex
 npm install fogex
 ```
 
+or
+
+```
+yarn add fogex
+```
+
 ## Usage
 
 ```
-import * as fogex from './fogex/index.js';
+import * as fogex from 'fogex';
 ```
 
 ```
@@ -24,7 +32,7 @@ fogex.isEmail('test@test'); // false
 `isPhoneNumber`
 
 ```
-fogex.isPhoneNumber('+1 800 5551212', 'US'); // true
+fogex.isPhoneNumber('+1 123 4567890', 'US'); // true
 ```
 
 `isPin`
@@ -41,13 +49,13 @@ fogex.isPin('123456', '6'); // true
 
 ```
 // Accepts all card types
-isCreditCard.isCreditCard('1234 1234 1234 1234'); // true
+isCreditCard.isCreditCard('XXXX XXXX XXXX XXXX'); // true
 ```
 
 #### Use with parameters
 
 ```
-isCreditCard.isCreditCard('4140 5542 4728 1917', 'VISA'); // true
+isCreditCard.isCreditCard('XXXX XXXX XXXX XXXX', 'VISA'); // true
 ```
 
 ## Regex Patterns
@@ -87,13 +95,6 @@ isCreditCard.isCreditCard('4140 5542 4728 1917', 'VISA'); // true
 | isString                      | Check if string of a letter                                                           |
 | isUpperCase                   | Check if the string is a UpperCase.                                                   |
 | isWhiteSpace                  | Check if the string contains white space.                                             |
-
-## Developers
-
-|                                                           |                                                       |
-| --------------------------------------------------------- | ----------------------------------------------------- |
-| ![](https://avatars.githubusercontent.com/u/19785698?v=4) | Emre Yilmaz \| [@ymzEmre](https://github.com/ymzEmre) |
-| ![](https://avatars.githubusercontent.com/u/39124676?v=4) | Ahmet Ozkan \| [@ahmet](https://github.com/ahmet021)  |
 
 ## Contribution
 
