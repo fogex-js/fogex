@@ -19,7 +19,7 @@ yarn add fogex
 ## Usage
 
 ```
-import * as fogex from 'fogex';
+import fogex from 'fogex';
 ```
 
 ```
