@@ -1,0 +1,19 @@
+{
+  "name": "fogex",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+    "jest": "^27.5.1"
+  }
+}
