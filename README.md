@@ -2,7 +2,7 @@
 
 ### Form Regex
 
-Quickly and easily check if the content is valid
+Quickly and easily check if the content is valid.
 
 ## Installation
 
@@ -19,7 +19,7 @@ yarn add fogex
 ## Usage
 
 ```
-import * as fogex from 'fogex';
+import fogex from 'fogex';
 ```
 
 ```
