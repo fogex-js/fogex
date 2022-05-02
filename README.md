@@ -2,7 +2,7 @@
 
 ### Form Regex
 
-Quickly and easily check if the content is valid
+Quickly and easily check if the content is valid.
 
 ## Installation
 
