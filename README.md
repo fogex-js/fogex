@@ -1,8 +1,8 @@
-# fogex
+# Fogex
 
 ### Form Regex
 
-Quickly and easily check if the content is valid
+Quickly and easily check if the content is valid.
 
 ## Installation
 
@@ -49,13 +49,13 @@ fogex.isPin('123456', '6'); // true
 
 ```
 // Accepts all card types
-isCreditCard.isCreditCard('XXXX XXXX XXXX XXXX'); // true
+fogex.isCreditCard('XXXX XXXX XXXX XXXX'); // true
 ```
 
 #### Use with parameters
 
 ```
-isCreditCard.isCreditCard('XXXX XXXX XXXX XXXX', 'VISA'); // true
+fogex.isCreditCard('XXXX XXXX XXXX XXXX', 'VISA'); // true
 ```
 
 ## Regex Patterns
