@@ -6,7 +6,18 @@
   "type": "module",
   "scripts": {
     "start": "node index",
-    "test": "jest"
+    "test": "jest",
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+  },
+  "lint-staged": {
+    "**/*.{js,json}": [
+      "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "keywords": [],
   "author": "",
@@ -17,6 +28,8 @@
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
-    "jest": "^27.5.1"
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.4.1"
   }
 }
