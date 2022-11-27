@@ -24,6 +24,7 @@ import isPort from './regex/isPort.js';
 import isPostalCode from './regex/isPostalCode.js';
 import isString from './regex/isString.js';
 import isWhiteSpace from './regex/isWhiteSpace.js';
+import creatorPattern from './regex/patternCreator/creatorPattern.js';
 
 export {
   isAscii,
@@ -52,4 +53,5 @@ export {
   isPostalCode,
   isString,
   isWhiteSpace,
+  creatorPattern,
 };
