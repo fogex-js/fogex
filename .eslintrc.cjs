@@ -14,4 +14,4 @@ module.exports = {
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
   },
-};
+}
