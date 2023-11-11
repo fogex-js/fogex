@@ -1,6 +1,10 @@
 {
   "name": "fogex",
+<<<<<<< HEAD
   "version": "0.0.5",
+=======
+  "version": "0.0.3",
+>>>>>>> 6789b76 (Fix file extension)
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
