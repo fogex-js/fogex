@@ -19,5 +19,9 @@
     "strictNullChecks": true,
     "strictFunctionTypes": true,
   },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
   "exclude": ["node_modules"]
 }

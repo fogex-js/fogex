@@ -22,6 +22,30 @@ yarn add fogex
 import fogex from 'fogex';
 ```
 
+Creating a Custom Pattern With The 'creatorPattern' Function
+
+a => a-z
+
+A => A-Z
+
+\# => 0-9
+
+! => Special Characters
+
+? => Optional Parameter
+
+Example
+
+```
+fogex.creatorPattern('aA#!', 8, 'aA1!1234') //true
+```
+
+```
+fogex.creatorPattern('aA?#!', 5, 'aa11*') // true
+```
+
+Defined Functions Example
+
 ```
 fogex.isEmail('test@test.com'); // true
 fogex.isEmail('test@test'); // false

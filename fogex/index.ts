@@ -24,7 +24,7 @@ import isPort from './patterns/isPort'
 import isPostalCode from './patterns/isPostalCode'
 import isString from './patterns/isString'
 import isWhiteSpace from './patterns/isWhiteSpace'
-import creatorPattern from './patterns/patternCreator/creatorPattern'
+import creatorPattern from './patterns/patternCreator/creatorPattern.js'
 
 export {
   isAscii,
