@@ -1,12 +1,13 @@
-const creatorPattern = (pattern, patternLength, value) => {
-  const optionalPatternList = []
-  const countOfPatternList = []
+const creatorPattern = (pattern:string, patternLength:number, value:string):boolean => {
+  const optionalPatternList:string[] = []
+  const countOfPatternList:string[][] = []
   let patternSplit = pattern.split('')
 
-  let a = [...patternSplit].map((item, index) => {
+  let a = [...patternSplit].map((item:string, index:number) => {
     if (item == '?') {
       return index - 1
     }
+    return undefined
   })
 
   a = a.filter((item) => item !== undefined)
@@ -48,4 +49,4 @@ const creatorPattern = (pattern, patternLength, value) => {
   return passwordPattern.test(value)
 }
 
-export default creatorPattern
+export default  creatorPattern
