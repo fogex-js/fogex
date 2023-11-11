@@ -1,2 +1,2 @@
-import * as fogex from './fogex/index.js';
+import * as fogex from './fogex/index';
 export default fogex;
