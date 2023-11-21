@@ -1,12 +1,13 @@
 {
   "name": "fogex",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "node index",
     "test": "jest",
+    "build": "tsc",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
   },
   "lint-staged": {
@@ -26,15 +27,15 @@
     "@babel/core": "^7.17.10",
     "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "@babel/preset-typescript": "^7.23.3",
-    "@types/jest": "^29.2.4",
+    "@types/jest": "^29.5.9",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-plugin-import": "^2.25.2",
     "husky": "^8.0.3",
-    "jest": "^29.6.1",
+    "jest": "^29.7.0",
     "lint-staged": "^13.2.3",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.3.2"
   },
   "dependencies": {
     "tsc": "^2.0.4"
