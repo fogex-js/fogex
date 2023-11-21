@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "outDir": "dist",
     "declaration": true,
@@ -15,32 +15,21 @@
     "noUnusedParameters": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
+    "noEmitOnError": true,
+    "noEmit": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "jsx": "react",
     "isolatedModules": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["jest", "node"],
-    "baseUrl": "src",
-    "paths": {
-      "@/*": ["src/*"]
-    },
+    "types": ["jest", "node"]
   },
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node"
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "tests/**/*.ts"],
-  "exclude": ["node_modules", "./test]"]
+  "include": ["fogex/**/*.ts","src/**/*.ts", "src/**/*.d.ts", "tests/**/*.ts"],
+  "exclude": ["node_modules"]
 }
-// {
-//   "compilerOptions": {
-//     "target": "es5",
-//     "module": "commonjs",
-//     "outDir": "./dist",
-//     "strict": true,
-//   },
-//   "include": ["./src/**/*.ts"],  // Sadece src klasöründeki TypeScript dosyalarını dahil et
-//   "exclude": ["./node_modules", "./test"]  // node_modules klasörünü dahil etme
-// }
+
