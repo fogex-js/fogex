@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "ESNext",
     "moduleResolution": "node",
     "outDir": "dist",
+    "declaration": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -18,10 +19,17 @@
     "noEmit": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
+    "jsx": "react",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["jest", "node"]
   },
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node"
   },
+  "include": ["fogex/**/*.ts","src/**/*.ts", "src/**/*.d.ts", "tests/**/*.ts"],
   "exclude": ["node_modules"]
 }
+
