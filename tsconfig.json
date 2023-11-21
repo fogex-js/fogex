@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es6",
+<<<<<<< HEAD
     "module": "commonjs",
+=======
+    "module": "ESNext",
+>>>>>>> 6177931 (Add index.d.ts and fix jest for typescript)
     "moduleResolution": "node",
     "outDir": "dist",
     "declaration": true,
