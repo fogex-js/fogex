@@ -1,4 +1,4 @@
-import isMonth from '../fogex/patterns/isMonth';
+import isMonth from '../src/patterns/isMonth';
 
 it('should return true for valid month values', () => {
   expect(isMonth('january')).toBe(true);

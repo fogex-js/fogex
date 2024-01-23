@@ -1,4 +1,4 @@
-import isWhiteSpace from '../fogex/patterns/isWhiteSpace';
+import isWhiteSpace from '../src/patterns/isWhiteSpace';
 
 it('should return true for valid white space strings', () => {
   expect(isWhiteSpace(' ')).toBe(true);

@@ -1,4 +1,4 @@
-import isColorCode from '../fogex/patterns/isColorCode';
+import isColorCode from '../src/patterns/isColorCode';
 
 it('should return true for valid color code values', () => {
   expect(isColorCode('rgb(255, 0, 0)', 'rgb')).toBe(true);

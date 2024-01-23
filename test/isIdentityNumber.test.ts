@@ -1,4 +1,4 @@
-import isIdentityNumber from '../fogex/patterns/isIdentityNumber';
+import isIdentityNumber from '../src/patterns/isIdentityNumber';
 
 it('should return true for identity number format', () => {
   expect(isIdentityNumber('11111111110', 'TR')).toBe(true);

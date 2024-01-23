@@ -1,4 +1,4 @@
-import isImageUrl from '../fogex/patterns/isImageUrl'
+import isImageUrl from '../src/patterns/isImageUrl'
 
 it('should return true for image url format', () => {
   expect(isImageUrl('http://website.com/directory/image.jpg', 'jpg')).toBe(true)

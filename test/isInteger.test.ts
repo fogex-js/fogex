@@ -1,4 +1,4 @@
-import isInteger from '../fogex/patterns/isInteger';
+import isInteger from '../src/patterns/isInteger';
 
 it('should return true for valid integer values', () => {
   expect(isInteger(0)).toBe(true);

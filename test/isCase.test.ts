@@ -1,4 +1,4 @@
-import isCase from '../fogex/patterns/isCase';
+import isCase from '../src/patterns/isCase';
 
 it('should return true for valid case values', () => {
   expect(isCase('abc', 'lower')).toBe(true);

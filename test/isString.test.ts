@@ -1,4 +1,4 @@
-import isString from '../fogex/patterns/isString';
+import isString from '../src/patterns/isString';
 
 it('should return true for valid string values', () => {
   expect(isString('abc')).toBe(true);
