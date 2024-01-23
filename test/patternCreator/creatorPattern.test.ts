@@ -1,5 +1,5 @@
-import { expect,it} from '@jest/globals';
-import creatorPattern from '../../fogex/patterns/patternCreator/creatorPattern'
+import { expect,it } from '@jest/globals';
+import creatorPattern from '../../src/patternCreator/creatorPattern'
 
 
 it('should', () => {
