@@ -28,7 +28,7 @@ const creatorPattern = (
   //     (result[currentValue[key]] = result[currentValue[key]] || []).push(
   //       currentValue
   //     );
-
+``
   //     return result;
   //   }, {});
   // };

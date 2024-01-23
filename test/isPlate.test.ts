@@ -1,4 +1,4 @@
-import isPlate from '../fogex/patterns/isPlate';
+import isPlate from '../src/patterns/isPlate';
 
 it('should return true for plate format', () => {
   expect(isPlate('01XX111', 'TR')).toBe(true);

@@ -1,4 +1,4 @@
-import isPostalCode from '../fogex/patterns/isPostalCode';
+import isPostalCode from '../src/patterns/isPostalCode';
 
 it('should return true for postal code format', () => {
   expect(isPostalCode('12345', 'TR')).toBe(true);

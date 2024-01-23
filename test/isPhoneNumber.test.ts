@@ -1,4 +1,4 @@
-import isPhoneNumber from '../fogex/patterns/isPhoneNumber';
+import isPhoneNumber from '../src/patterns/isPhoneNumber';
 
 it('should return true for phone format', () => {
   expect(isPhoneNumber('+905555555555', 'TR')).toBe(true);

@@ -1,4 +1,4 @@
-import isPort from '../fogex/patterns/isPort';
+import isPort from '../src/patterns/isPort';
 
 it('should return true for valid port numbers', () => {
   expect(isPort('80')).toBe(true);

@@ -1,4 +1,4 @@
-import isCreditCard from '../fogex/patterns/isCreditCard';
+import isCreditCard from '../src/patterns/isCreditCard';
 
 it('should return true for valid credit card values', () => {
   expect(isCreditCard('1111222233334444')).toBe(true);

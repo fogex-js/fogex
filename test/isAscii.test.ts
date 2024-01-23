@@ -1,4 +1,4 @@
-import isAscii from '../fogex/patterns/isAscii'
+import isAscii from '../src/patterns/isAscii'
 
 it('should return true for valid ascii strings', () => {
   expect(isAscii('abc')).toBe(true)
