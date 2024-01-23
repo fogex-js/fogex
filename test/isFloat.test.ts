@@ -1,4 +1,4 @@
-import isFloat from '../fogex/patterns/isFloat';
+import isFloat from '../src/patterns/isFloat';
 
 it('should return true for valid float values', () => {
   expect(isFloat('1.0')).toBe(true);

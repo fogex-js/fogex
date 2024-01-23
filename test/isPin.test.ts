@@ -1,4 +1,4 @@
-import isPin from '../fogex/patterns/isPin';
+import isPin from '../src/patterns/isPin';
 
 it('should return true for pin format', () => {
   expect(isPin('1234', 4)).toBe(true);

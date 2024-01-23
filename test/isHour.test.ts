@@ -1,4 +1,4 @@
-import isHour from '../fogex/patterns/isHour';
+import isHour from '../src/patterns/isHour';
 
 it('should return true for valid hour values', () => {
   expect(isHour('12:00am', 12)).toBe(true);
