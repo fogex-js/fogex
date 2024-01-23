@@ -1,6 +1,6 @@
-import isEmailType from './types/index.js'
+// import isEmailType from './types/index.js'
 
-const result = isEmailType('example@example.com')
+// const result = isEmailType('example@example.com')
 
 let pattern = new RegExp(/([a-zA-Z0-9])+\@([a-zA-Z0-9])+\.[a-zA-Z]{2,}/)
 
