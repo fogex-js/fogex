@@ -1,6 +1,6 @@
 {
   "name": "fogex",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
     "start": "node index",
     "test": "jest",
     "build": "tsc",
-    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
+    "pre-publish": "npm run build"
   },
   "lint-staged": {
     "**/*.{js,json}": [
@@ -20,8 +21,18 @@
       "pre-commit": "lint-staged"
     }
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "regex",
+    "regular expression"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git:github.com/fogex-js/fogex.git"
+  },
+  "engines": {
+    "node": ">=16.x"
+  },
+  "author": "ymzEmre",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.17.10",
