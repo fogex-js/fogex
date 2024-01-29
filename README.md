@@ -1,8 +1,10 @@
 # Fogex
 
-### Form Regex
+## About
 
-Quickly and easily check if the content is valid.
+I abbreviated the expression "Form Regular Expression" as "FOGEX" to give the library its name.
+
+A JavaScript library for quickly and easily testing the validity or invalidity of a value.
 
 ## Installation
 
@@ -22,41 +24,23 @@ yarn add fogex
 import fogex from 'fogex';
 ```
 
-Creating a Custom Pattern With The 'creatorPattern' Function
-
-a => a-z
-
-A => A-Z
-
-\# => 0-9
-
-! => Special Characters
-
-? => Optional Parameter
-
-Example
+### Pre-defined Regex Functions
 
 ```
-fogex.creatorPattern('aA#!', 8, 'aA1!1234') //true
+fogex.isEmail('test@test.com') // true
+fogex.isEmail('test@test') // false
 ```
 
-```
-fogex.creatorPattern('aA?#!', 5, 'aa11*') // true
-```
-
-Defined Functions Example
-
-```
-fogex.isEmail('test@test.com'); // true
-fogex.isEmail('test@test'); // false
-```
-
-### Use with parameters
+#### Use with parameters
 
 `isPhoneNumber`
 
 ```
-fogex.isPhoneNumber('+1 123 4567890', 'US'); // true
+fogex.isPhoneNumber('+11234567890', 'US'); // true
+fogex.isPhoneNumber('1234567890', 'US'); // true
+fogex.isPhoneNumber('+905555555555', 'US'); // true
+fogex.isPhoneNumber('05555555555', 'US'); // true
+fogex.isPhoneNumber('5555555555', 'US'); // true
 ```
 
 `isPin`
@@ -74,15 +58,43 @@ fogex.isPin('123456', '6'); // true
 ```
 // Accepts all card types
 fogex.isCreditCard('XXXX XXXX XXXX XXXX'); // true
+fogex.isCreditCard('XXXXXXXXXXXXXXXX'); // true
 ```
 
 #### Use with parameters
 
 ```
 fogex.isCreditCard('XXXX XXXX XXXX XXXX', 'VISA'); // true
+fogex.isCreditCard('XXXXXXXXXXXXXXXX', 'VISA'); // true
+
+fogex.isCreditCard('XXXX XXXX XXXX XXXX', 'MASTER'); // true
+fogex.isCreditCard('XXXXXXXXXXXXXXXX', 'MASTER'); // true
+
 ```
 
-## Regex Patterns
+### Set Custom Pattern
+
+a => a-z
+
+A => A-Z
+
+\# => 0-9
+
+! => Special Characters
+
+? => Optional Characters
+
+Example
+
+```
+fogex.customPattern('aA#!', 8, 'aA1!1234') //true
+```
+
+```
+fogex.customPattern('aA?#!', 5, 'aa11*') // true
+```
+
+## Pre-defined Regex Functions
 
 | Tables                        | Description                                                                           | Parameter                           |
 | ----------------------------- | :------------------------------------------------------------------------------------ | ----------------------------------- |
@@ -116,7 +128,7 @@ fogex.isCreditCard('XXXX XXXX XXXX XXXX', 'VISA'); // true
 
 ## Contribution
 
-Fogex is under development, and is open to suggestions and contributions.
+Fogex library is under development, and is open to suggestions and contributions.
 
 It is publicly open for any contribution. Bug fixes, new features and extra modules are welcome.
 
@@ -126,7 +138,7 @@ To report a bug: Please report it using GitHub Issues.
 
 ## MIT License
 
-Copyright (c) 2022 Emre Yilmaz
+Copyright (c) 2024 Emre Yilmaz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
