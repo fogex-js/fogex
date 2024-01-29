@@ -32,15 +32,5 @@
     "experimentalSpecifierResolution": "node"
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "tests/**/*.ts"],
-  "exclude": ["node_modules", "./test]"]
+  "exclude": ["node_modules", "./test"]
 }
-// {
-//   "compilerOptions": {
-//     "target": "es5",
-//     "module": "commonjs",
-//     "outDir": "./dist",
-//     "strict": true,
-//   },
-//   "include": ["./src/**/*.ts"],  // Sadece src klasöründeki TypeScript dosyalarını dahil et
-//   "exclude": ["./node_modules", "./test"]  // node_modules klasörünü dahil etme
-// }
