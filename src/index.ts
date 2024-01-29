@@ -1,4 +1,4 @@
-import creatorPattern from "./patternCreator/creatorPattern";
+import creatorPattern from "./customPattern/customPattern";
 import isAscii from "./patterns/isAscii";
 import isBoolean from "./patterns/isBoolean";
 import isCase from "patterns/isCase";

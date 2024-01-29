@@ -1,4 +1,4 @@
-const creatorPattern = (
+const customPattern = (
   pattern: string,
   patternLength: number,
   value: string
@@ -50,4 +50,4 @@ const creatorPattern = (
   return passwordPattern.test(value);
 };
 
-export default creatorPattern;
+export default customPattern;
