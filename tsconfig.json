@@ -4,6 +4,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "dist",
+    "rootDir": "src",
     "declaration": true,
     "strict": true,
     "esModuleInterop": true,
@@ -32,5 +33,5 @@
     "experimentalSpecifierResolution": "node"
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "tests/**/*.ts"],
-  "exclude": ["node_modules", "./test"]
+  "exclude": ["node_modules", "test"]
 }

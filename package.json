@@ -1,7 +1,7 @@
 {
   "name": "fogex",
   "version": "0.0.17",
-  "description": "",
+  "description": "A JavaScript library for quickly and easily testing the validity or invalidity of a value.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -38,7 +38,7 @@
     "@babel/core": "^7.17.10",
     "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "@babel/preset-typescript": "^7.23.3",
-    "@types/jest": "^29.5.9",
+    "@types/jest": "^29.5.11",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-plugin-import": "^2.25.2",
     "husky": "^8.0.3",
