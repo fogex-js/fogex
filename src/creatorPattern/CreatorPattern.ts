@@ -7,7 +7,7 @@ interface Options {
   specialCharacter?: boolean;
 }
 
-class CreatorPattern {
+class PasswordPatternValidator {
   private regexPattern: string;
 
   constructor(options: Options) {
@@ -16,48 +16,48 @@ class CreatorPattern {
 
   private buildRegexPattern(options: Options): string {
     let regexPattern = '^';
+  
+    const optionChecks: { [K in keyof Options]: () => string } = {
+      lowerCase: this.includeLowerCase,
+      upperCase: this.includeUpperCase,
+      number: this.includeNumber,
+      specialCharacter: this.includeSpecialCharacter,
+    };
 
-    if (options.lowerCase) {
-      regexPattern += this.lowerCase();
+    for (const [option, generatePattern] of Object.entries(optionChecks) as [keyof Options, () => string][]) {
+      if (options[option]) {
+        regexPattern += generatePattern();
+      }
     }
-
-    if (options.upperCase) {
-      regexPattern += this.upperCase();
-    }
-
-    if (options.number) {
-      regexPattern += this.number();
-    }
-
-    if (options.specialCharacter) {
-      regexPattern += this.specialCharacter();
-    }
-
+  
     return regexPattern + `.{${options.minLength || 0},${options.maxLength || ''}}$`;
   }
 
-  private lowerCase(): string {
+  private includeLowerCase(): string {
     return '(?=.*[a-z])';
   }
 
-  private upperCase(): string {
+  private includeUpperCase(): string {
     return '(?=.*[A-Z])';
   }
 
-  private number(): string {``
+  private includeNumber(): string {
     return '(?=.*\\d)';
   }
 
-  private specialCharacter(): string {
+  private includeSpecialCharacter(): string {
     return '(?=.*[!@#$%^&*()_+\\-=\\[\\]{};:\'",.<>/?])';
   }
 
   validate(value: string): boolean {
-    const regex = new RegExp(this.regexPattern);
-    return regex.test(value);
+    try {
+      const regex = new RegExp(this.regexPattern);
+      return regex.test(value);
+    } catch (error) {
+      console.error('Regex pattern creation error:', error);
+      return false;
+    }
   }
 }
 
-
-export default CreatorPattern;
-
+export default PasswordPatternValidator;
