@@ -1,6 +1,24 @@
 # Fogex
 
+## Table of Contents
+
+[Fogex](#fogex)
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [1) Use with pre-defined regex functions](#1-use-with-pre-defined-regex-functions)
+  - [2) Use with `customPattern` function](#2-use-with-custompattern-function)
+  - [3) Use with `creatorPattern` function](#3-use-with-creatorpattern-function)
+- [Pre-defined Regex Functions](#pre-defined-regex-functions)
+- [Contribution](#contribution)
+- [License](#mit-license)
+
 ## About
+
+### Introduction
+
+This package is still in the beta stage, please use it carefully.
 
 I abbreviated the expression "Form Regular Expression" as "FOGEX" to give the library its name.
 
@@ -20,15 +38,15 @@ yarn add fogex
 
 ## Usage
 
-```
-import fogex from 'fogex';
-```
-
-### Pre-defined Regex Functions
+### 1) Use with pre-defined regex functions
 
 ```
-fogex.isEmail('test@test.com') // true
-fogex.isEmail('test@test') // false
+import { isEmail } from 'fogex'
+```
+
+```
+isEmail('test@test.com') // true
+isEmail('test@test') // false
 ```
 
 #### Use with parameters
@@ -36,43 +54,60 @@ fogex.isEmail('test@test') // false
 `isPhoneNumber`
 
 ```
-fogex.isPhoneNumber('+11234567890', 'US'); // true
-fogex.isPhoneNumber('1234567890', 'US'); // true
-fogex.isPhoneNumber('+905555555555', 'US'); // true
-fogex.isPhoneNumber('05555555555', 'US'); // true
-fogex.isPhoneNumber('5555555555', 'US'); // true
+import { isPhoneNumber } from 'fogex'
+```
+
+```
+isPhoneNumber('+11234567890', 'US') // true
+isPhoneNumber('1234567890', 'US') // true
+isPhoneNumber('+905555555555', 'US') // true
+isPhoneNumber('05555555555', 'US') // true
+isPhoneNumber('5555555555', 'US') // true
 ```
 
 `isPin`
 
 ```
-fogex.isPin('1234', '4'); // true
-fogex.isPin('123456', '6'); // true
+import { isPin } from 'fogex'
+```
+
+```
+isPin('1234', '4') // true
+isPin('123456', '6') // true
 
 ```
 
 `isCreditCard`
 
-#### Default
+```
+import { isCreditCard } from 'fogex'
+```
+
+##### Default
 
 ```
 // Accepts all card types
-fogex.isCreditCard('XXXX XXXX XXXX XXXX'); // true
-fogex.isCreditCard('XXXXXXXXXXXXXXXX'); // true
+isCreditCard('XXXX XXXX XXXX XXXX') // true
+isCreditCard('XXXXXXXXXXXXXXXX') // true
 ```
 
-#### Use with parameters
+##### Use with parameters
 
 ```
-fogex.isCreditCard('XXXX XXXX XXXX XXXX', 'VISA'); // true
-fogex.isCreditCard('XXXXXXXXXXXXXXXX', 'VISA'); // true
-
-fogex.isCreditCard('XXXX XXXX XXXX XXXX', 'MASTER'); // true
-fogex.isCreditCard('XXXXXXXXXXXXXXXX', 'MASTER'); // true
-
+isCreditCard('XXXX XXXX XXXX XXXX', 'VISA') // true
+isCreditCard('XXXXXXXXXXXXXXXX', 'VISA') // true
 ```
 
-### Set Custom Pattern
+```
+isCreditCard('XXXX XXXX XXXX XXXX', 'MASTER') // true
+isCreditCard('XXXXXXXXXXXXXXXX', 'MASTER') // true
+```
+
+### 2) Use with `customPattern` function
+
+```
+import { customPattern } from 'fogex'
+```
 
 a => a-z
 
@@ -87,11 +122,48 @@ A => A-Z
 Example
 
 ```
-fogex.customPattern('aA#!', 8, 'aA1!1234') //true
+customPattern('aA#!', 8, 'aA1!1234') //true
+customPattern('aA?#!', 5, 'aa11\*') // true
+```
+
+### 3) Use with `creatorPattern` function
+
+```
+import { CreatorPattern } from 'fogex'
 ```
 
 ```
-fogex.customPattern('aA?#!', 5, 'aa11*') // true
+const value = 'qweR123!'
+
+const options = {
+  minLength: 6,
+  maxLength: 12,
+  lowerCase: true,
+  upperCase: true,
+  number: true,
+  specialCharacter: true,
+}
+
+const validator = new CreatorPattern(options)
+const isValid = validator.validate(value)
+
+console.log(isValid) // true
+```
+
+#### or
+
+```
+const validator = new CreatorPattern({
+  minLength: 6,
+  maxLength: 12,
+  lowerCase: true,
+  upperCase: true,
+  number: true,
+  specialCharacter: true,
+})
+
+const isValid = validator.validate(value)
+console.log(isValid)
 ```
 
 ## Pre-defined Regex Functions
@@ -145,3 +217,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+```
+
+```
