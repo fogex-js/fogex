@@ -1,4 +1,5 @@
 import creatorPattern from "./customPattern/customPattern";
+import CreatorPattern from "./creatorPattern/CreatorPattern";
 import isAscii from "./patterns/isAscii";
 import isBoolean from "./patterns/isBoolean";
 import isCase from "patterns/isCase";
@@ -29,6 +30,7 @@ import isWhiteSpace from "patterns/isWhiteSpace";
 
 export const fogex = {
   creatorPattern,
+  CreatorPattern,
   isAscii,
   isBoolean,
   isCase,
