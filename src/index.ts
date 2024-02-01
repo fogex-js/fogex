@@ -57,7 +57,5 @@ export {
   isPort,
   isPostalCode,
   isString,
-  isWhiteSpace
-}
-
-export default fogex
+  isWhiteSpace,
+};``
