@@ -18,7 +18,7 @@
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "jsx": "react",
-    "isolatedModules": true,
+    "isolatedModules": false,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "types": ["jest", "node"],
