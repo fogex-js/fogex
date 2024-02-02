@@ -2,17 +2,23 @@
 
 ## Table of Contents
 
+
+[Fogex](#fogex)
+
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
   - [1) Use with pre-defined regex functions](#1-use-with-pre-defined-regex-functions)
   - [2) Use with customPattern function](#2-use-with-custompattern-function)
   - [3) Use with generatorPattern function](#3-use-with-generatorpattern-function)
+  - [2) Use with `customPattern` function](#2-use-with-custompattern-function)
+  - [3) Use with `creatorPattern` function](#3-use-with-creatorpattern-function)
 - [Pre-defined Regex Functions](#pre-defined-regex-functions)
 - [Contribution](#contribution)
 - [License](#mit-license)
 
 ## About
+
 
 ## Introduction
 
@@ -124,6 +130,7 @@ customPattern('aA#!', 8, 'aA1!1234') //true
 customPattern('aA?#!', 5, 'aa11\*') // true
 ```
 
+
 ### 3) Use with `generatorPattern` function
 
 ```
@@ -146,12 +153,42 @@ const validator = new GeneratorPattern(options)
 const isValid = validator.validate(value)
 
 console.log(isValid) // true
+
+### 3) Use with `creatorPattern` function
+
+```
+import { CreatorPattern } from 'fogex'
+
 ```
 
 #### or
 
 ```
+
 const validator = new GeneratorPattern({
+=======
+const value = 'qweR123!'
+
+const options = {
+  minLength: 6,
+  maxLength: 12,
+  lowerCase: true,
+  upperCase: true,
+  number: true,
+  specialCharacter: true,
+}
+
+const validator = new CreatorPattern(options)
+const isValid = validator.validate(value)
+
+console.log(isValid) // true
+```
+
+#### or
+
+```
+const validator = new CreatorPattern({
+
   minLength: 6,
   maxLength: 12,
   lowerCase: true,
