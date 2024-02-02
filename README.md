@@ -5,9 +5,9 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
-  - [1) Use with pre-defined regex functions](#1-use-with-pre-defined-regex-functions)
-  - [2) Use with customPattern function](#2-use-with-custompattern-function)
-  - [3) Use with generatorPattern function](#3-use-with-generatorpattern-function)
+  - [1) Pre-defined regex functions](#1-use-with-pre-defined-regex-functions)
+  - [2) customPattern function](#2-use-with-custompattern-function)
+  - [3) GeneratorPattern class](#3-use-with-generatorpattern-function)
 - [Pre-defined Regex Functions](#pre-defined-regex-functions)
 - [Contribution](#contribution)
 - [License](#mit-license)
@@ -214,11 +214,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-```
-
-```
-
-```
-
-```
