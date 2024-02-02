@@ -2,8 +2,6 @@
 
 ## Table of Contents
 
-[Fogex](#fogex)
-
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -13,8 +11,6 @@
 - [Pre-defined Regex Functions](#pre-defined-regex-functions)
 - [Contribution](#contribution)
 - [License](#mit-license)
-
-## About
 
 ## Introduction
 
