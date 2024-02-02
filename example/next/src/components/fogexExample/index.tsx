@@ -30,5 +30,5 @@ const generatorPatternValidate = generatorPattern.validate(
 console.log('generatorPatternValidate', generatorPatternValidate)
 
 export default function Fogex() {
-  return <div>Fogex</div>
+  return <div>Fogex Example</div>
 }
