@@ -19,6 +19,7 @@
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "jsx": "react",
+    "sourceMap": true,
     "isolatedModules": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
