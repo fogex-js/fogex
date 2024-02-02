@@ -2,7 +2,6 @@
 
 ## Table of Contents
 
-
 [Fogex](#fogex)
 
 - [Introduction](#introduction)
@@ -11,14 +10,11 @@
   - [1) Use with pre-defined regex functions](#1-use-with-pre-defined-regex-functions)
   - [2) Use with customPattern function](#2-use-with-custompattern-function)
   - [3) Use with generatorPattern function](#3-use-with-generatorpattern-function)
-  - [2) Use with `customPattern` function](#2-use-with-custompattern-function)
-  - [3) Use with `creatorPattern` function](#3-use-with-creatorpattern-function)
 - [Pre-defined Regex Functions](#pre-defined-regex-functions)
 - [Contribution](#contribution)
 - [License](#mit-license)
 
 ## About
-
 
 ## Introduction
 
@@ -130,8 +126,7 @@ customPattern('aA#!', 8, 'aA1!1234') //true
 customPattern('aA?#!', 5, 'aa11\*') // true
 ```
 
-
-### 3) Use with `generatorPattern` function
+### 3) Use with `GeneratorPattern` function
 
 ```
 import { GeneratorPattern } from 'fogex'
@@ -153,48 +148,19 @@ const validator = new GeneratorPattern(options)
 const isValid = validator.validate(value)
 
 console.log(isValid) // true
-
-### 3) Use with `creatorPattern` function
-
-```
-import { CreatorPattern } from 'fogex'
-
 ```
 
 #### or
 
 ```
-
 const validator = new GeneratorPattern({
-=======
-const value = 'qweR123!'
 
-const options = {
-  minLength: 6,
-  maxLength: 12,
-  lowerCase: true,
-  upperCase: true,
-  number: true,
-  specialCharacter: true,
-}
-
-const validator = new CreatorPattern(options)
-const isValid = validator.validate(value)
-
-console.log(isValid) // true
-```
-
-#### or
-
-```
-const validator = new CreatorPattern({
-
-  minLength: 6,
-  maxLength: 12,
-  lowerCase: true,
-  upperCase: true,
-  number: true,
-  specialCharacter: true,
+minLength: 6,
+maxLength: 12,
+lowerCase: true,
+upperCase: true,
+number: true,
+specialCharacter: true,
 })
 
 const isValid = validator.validate(value)
@@ -252,6 +218,10 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+```
+
+```
 
 ```
 

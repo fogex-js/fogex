@@ -31,8 +31,6 @@ import isWhiteSpace from './patterns/isWhiteSpace'
 export {
   customPattern,
   GeneratorPattern,
-  customPattern,
-  CreatorPattern,
   isAscii,
   isBoolean,
   isCase,
