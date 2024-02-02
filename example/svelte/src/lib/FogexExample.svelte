@@ -2,11 +2,11 @@
   import { isPin, customPattern, GeneratorPattern } from 'fogex'
 
   // pre-defined patterns
-  const isPinValue = '1234'
+  const isPinValue: string = '1234'
   const isPinValidate: boolean = isPin(isPinValue, 4) || false
 
   // custom pattern
-  const customParameterValue = 'qweR123!'
+  const customParameterValue: string = 'qweR123!'
   const customParameterValidate: boolean = customPattern(
     'aA#!',
     8,
@@ -14,7 +14,7 @@
   )
 
   // class GeneratorPattern()
-  const generatorPatternValue = 'qweR123!'
+  const generatorPatternValue: string = 'qweR123!'
 
   const options = {
     minLength: 8,
@@ -25,7 +25,7 @@
     specialCharacter: true,
   }
 
-  const generatorPattern = new GeneratorPattern(options)
+  const generatorPattern: GeneratorPattern = new GeneratorPattern(options)
   const generatorPatternValidate: boolean = generatorPattern.validate(
     generatorPatternValue,
   )

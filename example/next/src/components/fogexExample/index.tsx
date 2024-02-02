@@ -2,17 +2,21 @@ import React from 'react'
 import { isPin, customPattern, GeneratorPattern } from 'fogex'
 
 // pre-defined patterns
-const isPinValue = '1234'
-const isPinValidate = isPin(isPinValue, 4)
+const isPinValue: string = '1234'
+const isPinValidate: boolean = isPin(isPinValue, 4) || false
 console.log('isPinValidate', isPinValidate)
 
 // custom pattern
-const customParameterValue = 'qweR123!'
-const customPatternValidate = customPattern('aA#!', 8, customParameterValue)
+const customParameterValue: string = 'qweR123!'
+const customPatternValidate: boolean = customPattern(
+  'aA#!',
+  8,
+  customParameterValue
+)
 console.log('customPatternValidate', customPatternValidate)
 
 // class GeneratorPattern()
-const generatorPatternValue = 'qweR123!'
+const generatorPatternValue: string = 'qweR123!'
 
 const options = {
   minLength: 8,
@@ -23,8 +27,8 @@ const options = {
   specialCharacter: true,
 }
 
-const generatorPattern = new GeneratorPattern(options)
-const generatorPatternValidate = generatorPattern.validate(
+const generatorPattern: GeneratorPattern = new GeneratorPattern(options)
+const generatorPatternValidate: boolean = generatorPattern.validate(
   generatorPatternValue
 )
 console.log('generatorPatternValidate', generatorPatternValidate)
