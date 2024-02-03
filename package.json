@@ -1,6 +1,6 @@
 {
   "name": "fogex",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "A JavaScript library for quickly and easily testing the validity or invalidity of a value.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
