@@ -150,13 +150,12 @@ console.log(isValid) // true
 
 ```
 const validator = new GeneratorPattern({
-
-minLength: 6,
-maxLength: 12,
-lowerCase: true,
-upperCase: true,
-number: true,
-specialCharacter: true,
+  minLength: 6,
+  maxLength: 12,
+  lowerCase: true,
+  upperCase: true,
+  number: true,
+  specialCharacter: true,
 })
 
 const isValid = validator.validate(value)
