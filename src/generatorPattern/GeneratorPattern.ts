@@ -15,7 +15,7 @@ class GeneratorPattern {
   }
 
   private buildRegexPattern(options: Options): string {
-    const optionChecks: { [K in keyof Options]: () => string } = {
+    const optionChecks = {
       lowerCase: () =>
         options.lowerCase ? this.includeLowerCase() : '(?!.*[a-z])',
       upperCase: () =>
