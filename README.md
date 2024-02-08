@@ -36,6 +36,8 @@ yarn add fogex
 
 ### 1) Use with pre-defined regex functions
 
+`isEmail`
+
 ```
 import { isEmail } from 'fogex'
 ```
@@ -45,9 +47,9 @@ isEmail('test@test.com') // true
 isEmail('test@test') // false
 ```
 
-#### Use with parameters
-
 `isPhoneNumber`
+
+###### Use with parameters
 
 ```
 import { isPhoneNumber } from 'fogex'
@@ -79,7 +81,7 @@ isPin('123456', '6') // true
 import { isCreditCard } from 'fogex'
 ```
 
-##### Default
+###### Default
 
 ```
 // Accepts all card types
@@ -87,7 +89,7 @@ isCreditCard('XXXX XXXX XXXX XXXX') // true
 isCreditCard('XXXXXXXXXXXXXXXX') // true
 ```
 
-##### Use with parameters
+###### Use with parameters
 
 ```
 isCreditCard('XXXX XXXX XXXX XXXX', 'VISA') // true
