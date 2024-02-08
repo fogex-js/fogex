@@ -107,15 +107,15 @@ isCreditCard('XXXXXXXXXXXXXXXX', 'MASTER') // true
 import { customPattern } from 'fogex'
 ```
 
-a => a-z
+`a` => a-z
 
-A => A-Z
+`A` => A-Z
 
-\# => 0-9
+`#` => 0-9
 
-! => Special Characters
+`!` => Special Characters
 
-? => Optional Characters
+`?` => Optional Characters
 
 Example
 
@@ -148,7 +148,7 @@ const isValid = validator.validate(value)
 console.log(isValid) // true
 ```
 
-#### or
+###### or
 
 ```
 const validator = new GeneratorPattern({
