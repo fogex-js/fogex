@@ -1,7 +1,7 @@
 # Fogex
 
 [![npm version](https://badge.fury.io/js/fogex.svg)](https://badge.fury.io/js/fogex)
-[![Coverage](https://img.shields.io/badge/coverage-95.91%25-green)]()
+[![Coverage](https://img.shields.io/badge/coverage-95.91%25-gree)]()
 
 ## Table of Contents
 
