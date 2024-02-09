@@ -1,5 +1,20 @@
-import isImei from '../src/patterns/isImei';
+import isImei from '../src/patterns/isImei'
 
 it('should return true for valid IMEI strings', () => {
-  expect(isImei('123456789012345')).toBe(true);
-});
+  expect(isImei('123456789012345')).toBe(true)
+  expect(isImei('12345678901234')).toBe(false)
+  expect(isImei('')).toBe(false)
+  expect(isImei(' ')).toBe(false)
+  expect(isImei('true')).toBe(false)
+  expect(isImei('false')).toBe(false)
+  expect(isImei()).toBe(false)
+  expect(isImei(null)).toBe(false)
+  expect(isImei(true)).toBe(false)
+  expect(isImei(false)).toBe(false)
+  expect(isImei({})).toBe(false)
+  expect(isImei([])).toBe(false)
+  expect(isImei(1)).toBe(false)
+  expect(isImei(0)).toBe(false)
+  expect(isImei('1')).toBe(false)
+  expect(isImei('0')).toBe(false)
+})

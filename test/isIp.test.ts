@@ -1,5 +1,25 @@
-import isIp from '../src/patterns/isIp';
+import isIp from '../src/patterns/isIp'
 
 it('should return true for valid IP strings', () => {
-  expect(isIp('192.168.1.1')).toBe(true);
-});
+  expect(isIp('192.168.1.1')).toBe(true)
+  expect(isIp('')).toBe(false)
+  expect(isIp(' ')).toBe(false)
+  expect(isIp('true')).toBe(false)
+  expect(isIp('false')).toBe(false)
+
+  expect(isIp()).toBe(false)
+  expect(isIp(null)).toBe(false)
+  expect(isIp(true)).toBe(false)
+  expect(isIp(false)).toBe(false)
+  expect(isIp({})).toBe(false)
+  expect(isIp([])).toBe(false)
+  expect(isIp(1)).toBe(false)
+  expect(isIp(0)).toBe(false)
+  expect(isIp('1')).toBe(false)
+  expect(isIp('0')).toBe(false)
+  expect(isIp('1.')).toBe(false)
+  expect(isIp('.1')).toBe(false)
+  expect(isIp('1.1.')).toBe(false)
+  expect(isIp('1.1.1')).toBe(false)
+  expect(isIp('1.1.1.')).toBe(false)
+})

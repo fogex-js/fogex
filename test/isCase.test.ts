@@ -1,10 +1,28 @@
-import isCase from '../src/patterns/isCase';
+import isCase from '../src/patterns/isCase'
 
 it('should return true for valid case values', () => {
-  expect(isCase('abc', 'lower')).toBe(true);
-  expect(isCase('ABC', 'upper')).toBe(true);
-  expect(isCase('testTest', 'camel')).toBe(true);
-  expect(isCase('FooBar', 'pascal')).toBe(true);
-  expect(isCase('FooBarBaz', 'pascal')).toBe(true);
-  expect(isCase('FooBarBazQux', 'pascal')).toBe(true);
-});
+  expect(isCase('abc', 'lower')).toBe(true)
+  expect(isCase('ABC', 'upper')).toBe(true)
+  expect(isCase('testTest', 'camel')).toBe(true)
+  expect(isCase('FooBar', 'pascal')).toBe(true)
+  expect(isCase('FooBarBaz', 'pascal')).toBe(true)
+  expect(isCase('FooBarBazQux', 'pascal')).toBe(true)
+  expect(isCase('ABC', 'lower')).toBe(false)
+  expect(isCase('abc', 'upper')).toBe(false)
+  expect(isCase('testTest', 'upper')).toBe(false)
+  expect(isCase('FooBar', 'camel')).toBe(false)
+  expect(isCase('fooBar', 'pascal')).toBe(false)
+  expect(isCase(' ', 'lower')).toBe(false)
+  expect(isCase()).toBe(false)
+  expect(isCase(null)).toBe(false)
+  expect(isCase({})).toBe(false)
+  expect(isCase([])).toBe(false)
+  expect(isCase(1)).toBe(false)
+  expect(isCase(0)).toBe(false)
+  expect(isCase(true)).toBe(false)
+  expect(isCase(false)).toBe(false)
+  expect(isCase('')).toBe(false)
+  expect(isCase(' ')).toBe(false)
+  expect(isCase('true')).toBe(false)
+  expect(isCase('false')).toBe(false)
+})

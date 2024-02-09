@@ -3,13 +3,15 @@ const pattern = {
   upper: /^[A-Z]+$/,
   camel: /^[a-z][a-zA-Z0-9]*$/,
   pascal: /^[A-Z][a-zA-Z0-9]*$/,
-};
+}
 
-const isCase = (value: string | null, cases: keyof typeof pattern): boolean | undefined => {
-  const patternCase = new RegExp(pattern[cases]);
-  if (value === null || patternCase.test('')) return undefined;
+const isCase = (
+  value?: any,
+  cases?: keyof typeof pattern
+): boolean | undefined => {
+  const patternCase = new RegExp(pattern[cases || 'lower'])
 
-  return patternCase.test(value);
-};
+  return patternCase.test(value || '')
+}
 
-export default isCase;
+export default isCase

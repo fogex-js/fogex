@@ -1,16 +1,30 @@
-import isMonth from '../src/patterns/isMonth';
+import isMonth from '../src/patterns/isMonth'
 
 it('should return true for valid month values', () => {
-  expect(isMonth('january')).toBe(true);
-  expect(isMonth('february')).toBe(true);
-  expect(isMonth('march')).toBe(true);
-  expect(isMonth('april')).toBe(true);
-  expect(isMonth('may')).toBe(true);
-  expect(isMonth('june')).toBe(true);
-  expect(isMonth('july')).toBe(true);
-  expect(isMonth('august')).toBe(true);
-  expect(isMonth('september')).toBe(true);
-  expect(isMonth('october')).toBe(true);
-  expect(isMonth('november')).toBe(true);
-  expect(isMonth('december')).toBe(true);
-});
+  expect(isMonth('january')).toBe(true)
+  expect(isMonth('february')).toBe(true)
+  expect(isMonth('march')).toBe(true)
+  expect(isMonth('april')).toBe(true)
+  expect(isMonth('may')).toBe(true)
+  expect(isMonth('june')).toBe(true)
+  expect(isMonth('july')).toBe(true)
+  expect(isMonth('august')).toBe(true)
+  expect(isMonth('september')).toBe(true)
+  expect(isMonth('october')).toBe(true)
+  expect(isMonth('november')).toBe(true)
+  expect(isMonth('december')).toBe(true)
+  expect(isMonth('')).toBe(false)
+  expect(isMonth(' ')).toBe(false)
+  expect(isMonth('true')).toBe(false)
+  expect(isMonth('false')).toBe(false)
+  expect(isMonth()).toBe(false)
+  expect(isMonth(null)).toBe(false)
+  expect(isMonth(true)).toBe(false)
+  expect(isMonth(false)).toBe(false)
+  expect(isMonth({})).toBe(false)
+  expect(isMonth([])).toBe(false)
+  expect(isMonth(1)).toBe(false)
+  expect(isMonth(0)).toBe(false)
+  expect(isMonth('1')).toBe(false)
+  expect(isMonth('0')).toBe(false)
+})

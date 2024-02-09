@@ -1,7 +1,8 @@
 const pattern = new RegExp(/^\s*/)
 
-const isWhiteSpace = (value:string) => {
-  if (value === null || pattern === new RegExp('/(?:)/')) return
+const isWhiteSpace = (value?: any) => {
+  if (!value) return false
+
   return pattern.test(value)
 }
 

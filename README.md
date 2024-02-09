@@ -1,5 +1,7 @@
 # Fogex
 
+<!-- [![npm version](https://badge.fury.io/js/fogex.svg)](https://badge.fury.io/js/fogex) -->
+
 ## Table of Contents
 
 - [Introduction](#introduction)

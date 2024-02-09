@@ -1,5 +1,20 @@
-import isMongoId from '../src/patterns/isMongoId';
+import isMongoId from '../src/patterns/isMongoId'
 
 it('should return true for valid mongoId values', () => {
-  expect(isMongoId('507f1f77bcf86cd799439011')).toBe(true);
-});
+  expect(isMongoId('507f1f77bcf86cd799439011')).toBe(true)
+  expect(isMongoId('')).toBe(false)
+  expect(isMongoId()).toBe(false)
+  expect(isMongoId(null)).toBe(false)
+  expect(isMongoId(true)).toBe(false)
+  expect(isMongoId(false)).toBe(false)
+  expect(isMongoId({})).toBe(false)
+  expect(isMongoId([])).toBe(false)
+  expect(isMongoId(1)).toBe(false)
+  expect(isMongoId(0)).toBe(false)
+  expect(isMongoId('1')).toBe(false)
+  expect(isMongoId('0')).toBe(false)
+  expect(isMongoId('507f1f77bcf86cd79943901')).toBe(false)
+  expect(isMongoId('507f1f77bcf86cd7994390111')).toBe(false)
+  expect(isMongoId('507f1f77bcf86cd79943901z')).toBe(false)
+  expect(isMongoId('507f1f77bcf86cd79943901Z')).toBe(false)
+})

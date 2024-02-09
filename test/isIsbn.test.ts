@@ -1,7 +1,20 @@
-import isISBN from '../src/patterns/isIsbn';
+import isISBN from '../src/patterns/isIsbn'
 
 it('should return true for valid isbn strings', () => {
-  expect(isISBN('978-1-56619-909-4')).toBe(true);
-  expect(isISBN('1-56619-909-3')).toBe(true);
-  expect(isISBN('978 1 56619 909 4')).toBe(true);
-});
+  expect(isISBN('978-1-56619-909-4')).toBe(true)
+  expect(isISBN('1-56619-909-3')).toBe(true)
+  expect(isISBN('978 1 56619 909 4')).toBe(true)
+  expect(isISBN('1 56619 909 3')).toBe(true)
+  expect(isISBN('9781566199094')).toBe(true)
+  expect(isISBN('')).toBe(false)
+  expect(isISBN()).toBe(false)
+  expect(isISBN(null)).toBe(false)
+  expect(isISBN(true)).toBe(false)
+  expect(isISBN(false)).toBe(false)
+  expect(isISBN({})).toBe(false)
+  expect(isISBN([])).toBe(false)
+  expect(isISBN(1)).toBe(false)
+  expect(isISBN(0)).toBe(false)
+  expect(isISBN('1')).toBe(false)
+  expect(isISBN('0')).toBe(false)
+})

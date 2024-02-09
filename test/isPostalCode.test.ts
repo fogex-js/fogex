@@ -1,8 +1,25 @@
-import isPostalCode from '../src/patterns/isPostalCode';
+import isPostalCode from '../src/patterns/isPostalCode'
 
 it('should return true for postal code format', () => {
-  expect(isPostalCode('12345', 'TR')).toBe(true);
-  expect(isPostalCode('12345', 'US')).toBe(true);
-  expect(isPostalCode('12345-1234', 'US')).toBe(true);
-  expect(isPostalCode('G3H 6A3', 'US')).toBe(true);
-});
+  expect(isPostalCode('12345', 'TR')).toBe(true)
+  expect(isPostalCode('12345', 'US')).toBe(true)
+  expect(isPostalCode('12345-1234', 'US')).toBe(true)
+  expect(isPostalCode('G3H 6A3', 'US')).toBe(true)
+  expect(isPostalCode('G3H6A3', 'US')).toBe(true)
+  expect(isPostalCode('G3H-6A3', 'US')).toBe(true)
+  expect(isPostalCode('')).toBe(false)
+  expect(isPostalCode()).toBe(false)
+  expect(isPostalCode(null)).toBe(false)
+  expect(isPostalCode(true)).toBe(false)
+  expect(isPostalCode(false)).toBe(false)
+  expect(isPostalCode({})).toBe(false)
+  expect(isPostalCode([])).toBe(false)
+  expect(isPostalCode(1)).toBe(false)
+  expect(isPostalCode(0)).toBe(false)
+  expect(isPostalCode('1')).toBe(false)
+  expect(isPostalCode('0')).toBe(false)
+  expect(isPostalCode('1.1')).toBe(false)
+  expect(isPostalCode('0.1')).toBe(false)
+  expect(isPostalCode('1.1.1')).toBe(false)
+  expect(isPostalCode('0.1.1')).toBe(false)
+})

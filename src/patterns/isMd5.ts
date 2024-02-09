@@ -1,7 +1,8 @@
 const pattern = new RegExp(/^[a-f0-9]{32}$/)
 
-const isMd5 = (value:string) => {
-  if (value === null || pattern === new RegExp('/(?:)/')) return
+const isMd5 = (value?: any) => {
+  if (!value) return false
+
   return pattern.test(value)
 }
 

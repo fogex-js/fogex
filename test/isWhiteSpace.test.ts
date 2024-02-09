@@ -1,11 +1,30 @@
-import isWhiteSpace from '../src/patterns/isWhiteSpace';
+import isWhiteSpace from '../src/patterns/isWhiteSpace'
 
 it('should return true for valid white space strings', () => {
-  expect(isWhiteSpace(' ')).toBe(true);
-  expect(isWhiteSpace('test ')).toBe(true);
-  expect(isWhiteSpace('test test')).toBe(true);
-  expect(isWhiteSpace('\t')).toBe(true);
-  expect(isWhiteSpace('\n')).toBe(true);
-  expect(isWhiteSpace('\r')).toBe(true);
-  expect(isWhiteSpace('\f')).toBe(true);
-});
+  expect(isWhiteSpace(' ')).toBe(true)
+  expect(isWhiteSpace('test ')).toBe(true)
+  expect(isWhiteSpace('test test')).toBe(true)
+  expect(isWhiteSpace('\t')).toBe(true)
+  expect(isWhiteSpace('\n')).toBe(true)
+  expect(isWhiteSpace('\r')).toBe(true)
+  expect(isWhiteSpace('\f')).toBe(true)
+  expect(isWhiteSpace('\v')).toBe(true)
+  expect(isWhiteSpace('')).toBe(false)
+  expect(isWhiteSpace()).toBe(false)
+  expect(isWhiteSpace(null)).toBe(false)
+  expect(isWhiteSpace(true)).toBe(false)
+  expect(isWhiteSpace(false)).toBe(false)
+  expect(isWhiteSpace({})).toBe(false)
+  expect(isWhiteSpace([])).toBe(false)
+  expect(isWhiteSpace(1)).toBe(false)
+  expect(isWhiteSpace(0)).toBe(false)
+  expect(isWhiteSpace('1')).toBe(false)
+  expect(isWhiteSpace('0')).toBe(false)
+  expect(isWhiteSpace('1.1')).toBe(false)
+  expect(isWhiteSpace('0.1')).toBe(false)
+  expect(isWhiteSpace('1.1.1')).toBe(false)
+  expect(isWhiteSpace('0.1.1')).toBe(false)
+  expect(isWhiteSpace('test')).toBe(false)
+  expect(isWhiteSpace('test test')).toBe(false)
+  expect(isWhiteSpace('test test test')).toBe(false)
+})

@@ -1,9 +1,22 @@
-import isIdentityNumber from '../src/patterns/isIdentityNumber';
+import isIdentityNumber from '../src/patterns/isIdentityNumber'
 
 it('should return true for identity number format', () => {
-  expect(isIdentityNumber('11111111110', 'TR')).toBe(true);
-  expect(isIdentityNumber('22222222222', 'TR')).toBe(true);
-  expect(isIdentityNumber('011111111111', 'TR')).toBe(false);
-  expect(isIdentityNumber('12222222221', 'TR')).toBe(false);
-  expect(isIdentityNumber('001-01-0011', 'US')).toBe(true);
-});
+  expect(isIdentityNumber('11111111110', 'TR')).toBe(true)
+  expect(isIdentityNumber('22222222222', 'TR')).toBe(true)
+  expect(isIdentityNumber('011111111111', 'TR')).toBe(false)
+  expect(isIdentityNumber('12222222221', 'TR')).toBe(false)
+  expect(isIdentityNumber('001-01-0011', 'US')).toBe(true)
+  expect(isIdentityNumber('123-45-6789', 'US')).toBe(true)
+  expect(isIdentityNumber('000-00-0000', 'US')).toBe(false)
+  expect(isIdentityNumber('123-45-67890', 'US')).toBe(false)
+  expect(isIdentityNumber('')).toBe(false)
+  expect(isIdentityNumber(' ')).toBe(false)
+  expect(isIdentityNumber('true')).toBe(false)
+  expect(isIdentityNumber('false')).toBe(false)
+  expect(isIdentityNumber()).toBe(false)
+  expect(isIdentityNumber(null)).toBe(false)
+  expect(isIdentityNumber(true)).toBe(false)
+  expect(isIdentityNumber(false)).toBe(false)
+  expect(isIdentityNumber({})).toBe(false)
+  expect(isIdentityNumber([])).toBe(false)
+})

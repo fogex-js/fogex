@@ -1,5 +1,23 @@
-import isPassword from '../src/patterns/isPassword';
+import isPassword from '../src/patterns/isPassword'
 
 it('should return true for valid password strings', () => {
-  expect(isPassword('foobarTest!123')).toBe(true);
-});
+  expect(isPassword('foobarTest!123')).toBe(true)
+  expect(isPassword('foobarTest!')).toBe(true)
+  expect(isPassword('foobarTest123')).toBe(true)
+  expect(isPassword('foobarTest')).toBe(true)
+  expect(isPassword('')).toBe(false)
+  expect(isPassword()).toBe(false)
+  expect(isPassword(null)).toBe(false)
+  expect(isPassword(true)).toBe(false)
+  expect(isPassword(false)).toBe(false)
+  expect(isPassword({})).toBe(false)
+  expect(isPassword([])).toBe(false)
+  expect(isPassword(1)).toBe(false)
+  expect(isPassword(0)).toBe(false)
+  expect(isPassword('1')).toBe(false)
+  expect(isPassword('0')).toBe(false)
+  expect(isPassword('1.1')).toBe(false)
+  expect(isPassword('0.1')).toBe(false)
+  expect(isPassword('1.1.1')).toBe(false)
+  expect(isPassword('0.1.1')).toBe(false)
+})

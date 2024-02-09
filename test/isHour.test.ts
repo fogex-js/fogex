@@ -1,10 +1,30 @@
-import isHour from '../src/patterns/isHour';
+import isHour from '../src/patterns/isHour'
 
 it('should return true for valid hour values', () => {
-  expect(isHour('12:00am', 12)).toBe(true);
-  expect(isHour('01:00pm', 12)).toBe(true);
-  expect(isHour('10:15am', 12)).toBe(true);
-  expect(isHour('12:00', 24)).toBe(true);
-  expect(isHour('01:00', 24)).toBe(true);
-  expect(isHour('10:15', 24)).toBe(true);
-});
+  expect(isHour('12:00am', 12)).toBe(true)
+  expect(isHour('01:00pm', 12)).toBe(true)
+  expect(isHour('10:15am', 12)).toBe(true)
+  expect(isHour('12:00', 24)).toBe(true)
+  expect(isHour('01:00', 24)).toBe(true)
+  expect(isHour('10:15', 24)).toBe(true)
+  expect(isHour('12:00am')).toBe(true)
+  expect(isHour('01:00pm')).toBe(true)
+  expect(isHour('10:15am')).toBe(true)
+  expect(isHour('12:00')).toBe(true)
+  expect(isHour('01:00')).toBe(true)
+  expect(isHour('10:15')).toBe(true)
+  expect(isHour('')).toBe(false)
+  expect(isHour(' ')).toBe(false)
+  expect(isHour('true')).toBe(false)
+  expect(isHour('false')).toBe(false)
+  expect(isHour()).toBe(false)
+  expect(isHour(null)).toBe(false)
+  expect(isHour(true)).toBe(false)
+  expect(isHour(false)).toBe(false)
+  expect(isHour({})).toBe(false)
+  expect(isHour([])).toBe(false)
+  expect(isHour(1)).toBe(false)
+  expect(isHour(0)).toBe(false)
+  expect(isHour('1')).toBe(false)
+  expect(isHour('0')).toBe(false)
+})

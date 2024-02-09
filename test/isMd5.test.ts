@@ -1,5 +1,23 @@
-import isMd5 from '../src/patterns/isMd5';
+import isMd5 from '../src/patterns/isMd5'
 
 it('should return true for valid MD5 strings', () => {
-  expect(isMd5('12345678901234567890123456789012')).toBe(true);
-});
+  expect(isMd5('12345678901234567890123456789012')).toBe(true)
+  expect(isMd5('1234567890123456789012345678901')).toBe(false)
+  expect(isMd5('123456789012345678901234567890123')).toBe(false)
+  expect(isMd5('')).toBe(false)
+  expect(isMd5(' ')).toBe(false)
+  expect(isMd5('true')).toBe(false)
+  expect(isMd5('false')).toBe(false)
+  expect(isMd5()).toBe(false)
+  expect(isMd5(null)).toBe(false)
+  expect(isMd5(true)).toBe(false)
+  expect(isMd5(false)).toBe(false)
+  expect(isMd5({})).toBe(false)
+  expect(isMd5([])).toBe(false)
+  expect(isMd5(1)).toBe(false)
+  expect(isMd5(0)).toBe(false)
+  expect(isMd5('1')).toBe(false)
+  expect(isMd5('0')).toBe(false)
+  expect(isMd5('1.1')).toBe(false)
+  expect(isMd5('0.1')).toBe(false)
+})

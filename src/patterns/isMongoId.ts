@@ -1,7 +1,8 @@
 const pattern = new RegExp('^[0-9a-fA-F]{24}$')
 
-const isMongoId = (value:string) => {
-  if (value === null || pattern === new RegExp('/(?:)/')) return
+const isMongoId = (value?: any) => {
+  if (!value) return false
+
   return pattern.test(value)
 }
 

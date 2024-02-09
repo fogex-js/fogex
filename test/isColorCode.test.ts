@@ -1,13 +1,38 @@
-import isColorCode from '../src/patterns/isColorCode';
+import isColorCode from '../src/patterns/isColorCode'
 
 it('should return true for valid color code values', () => {
-  expect(isColorCode('rgb(255, 0, 0)', 'rgb')).toBe(true);
-  expect(isColorCode('rgb(0, 255, 0)', 'rgb')).toBe(true);
-  expect(isColorCode('rgb(0, 0, 255)', 'rgb')).toBe(true);
-  expect(isColorCode('rgb(255, 255, 255)', 'rgb')).toBe(true);
-  expect(isColorCode('rgb(0, 0, 0)', 'rgb')).toBe(true);
-  expect(isColorCode('#addaca', 'hex')).toBe(true);
-  expect(isColorCode('addaca', 'hex')).toBe(true);
-  expect(isColorCode('hsl(0, 100%, 50%)', 'hsl')).toBe(true);
-  expect(isColorCode('', 'rgb')).toBe(false);
-});
+  expect(isColorCode('rgb(255, 0, 0)', 'rgb')).toBe(true)
+  expect(isColorCode('rgb(0, 255, 0)', 'rgb')).toBe(true)
+  expect(isColorCode('rgb(0, 0, 255)', 'rgb')).toBe(true)
+  expect(isColorCode('rgb(255, 255, 255)', 'rgb')).toBe(true)
+  expect(isColorCode('rgb(0, 0, 0)', 'rgb')).toBe(true)
+  expect(isColorCode('#addaca', 'hex')).toBe(true)
+  expect(isColorCode('addaca', 'hex')).toBe(true)
+  expect(isColorCode('hsl(0, 100%, 50%)', 'hsl')).toBe(true)
+  expect(isColorCode('', 'rgb')).toBe(false)
+  expect(isColorCode(' ', 'hex')).toBe(false)
+  expect(isColorCode(' ', 'hsl')).toBe(false)
+  expect(isColorCode(' ', 'rgb')).toBe(false)
+  expect(isColorCode('rgb(255, 0, 0)', 'hex')).toBe(false)
+  expect(isColorCode('rgb(255, 0, 0)', 'hsl')).toBe(false)
+  expect(isColorCode('rgb(255, 0, 0)', 'rgb')).toBe(true)
+  expect(isColorCode('rgb(255, 0, 0)')).toBe(true)
+  expect(isColorCode('rgb(255, 0, 0)', 'hex')).toBe(false)
+  expect(isColorCode('rgb(255, 0, 0)', 'hsl')).toBe(false)
+  expect(isColorCode('rgb(255, 0, 0)', 'rgb')).toBe(true)
+  expect(isColorCode('rgb(255, 0, 0)')).toBe(true)
+  expect(isColorCode()).toBe(false)
+  expect(isColorCode(null)).toBe(false)
+  expect(isColorCode(true)).toBe(false)
+  expect(isColorCode(false)).toBe(false)
+  expect(isColorCode({})).toBe(false)
+  expect(isColorCode([])).toBe(false)
+  expect(isColorCode('')).toBe(false)
+  expect(isColorCode(' ')).toBe(false)
+  expect(isColorCode('true')).toBe(false)
+  expect(isColorCode('false')).toBe(false)
+  expect(isColorCode(1)).toBe(false)
+  expect(isColorCode(0)).toBe(false)
+  expect(isColorCode('1')).toBe(false)
+  expect(isColorCode('0')).toBe(false)
+})

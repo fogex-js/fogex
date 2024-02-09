@@ -1,7 +1,8 @@
 const pattern = new RegExp(/^[-+]?[0-9]*\.?[0-9]+$/)
 
-const isFloat = (value:string) => {
-  if (value === null || pattern === new RegExp('/(?:)/')) return
+const isFloat = (value?: any) => {
+  if (!value) return false
+
   return pattern.test(value)
 }
 

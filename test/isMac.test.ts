@@ -1,5 +1,22 @@
-import isMac from '../src/patterns/isMac';
+import isMac from '../src/patterns/isMac'
 
 it('should return true for valid MAC strings', () => {
-  expect(isMac('00-00-00-00-00-00')).toBe(true);
-});
+  expect(isMac('00-00-00-00-00-00')).toBe(true)
+  expect(isMac('00-00-00-00-00-0')).toBe(false)
+  expect(isMac('00:00:00:00:00:00')).toBe(true)
+  expect(isMac('00:00:00:00:00:0')).toBe(false)
+  expect(isMac('00 00 00 00 00 00')).toBe(true)
+  expect(isMac('00 00 00 00 00 0')).toBe(false)
+  expect(isMac('')).toBe(false)
+  expect(isMac(' ')).toBe(false)
+  expect(isMac('true')).toBe(false)
+  expect(isMac('false')).toBe(false)
+  expect(isMac()).toBe(false)
+  expect(isMac(null)).toBe(false)
+  expect(isMac(true)).toBe(false)
+  expect(isMac(false)).toBe(false)
+  expect(isMac({})).toBe(false)
+  expect(isMac([])).toBe(false)
+  expect(isMac(1)).toBe(false)
+  expect(isMac(0)).toBe(false)
+})

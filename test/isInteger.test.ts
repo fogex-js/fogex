@@ -1,7 +1,25 @@
-import isInteger from '../src/patterns/isInteger';
+import isInteger from '../src/patterns/isInteger'
 
 it('should return true for valid integer values', () => {
-  expect(isInteger(0)).toBe(true);
-  expect(isInteger(1)).toBe(true);
-  // expect(isInteger(-1)).toBe(true);
-});
+  expect(isInteger(0)).toBe(true)
+  expect(isInteger(1)).toBe(true)
+  expect(isInteger(-1)).toBe(true)
+  expect(isInteger(100)).toBe(true)
+  expect(isInteger(-100)).toBe(true)
+  expect(isInteger(1000)).toBe(true)
+  expect(isInteger()).toBe(false)
+  expect(isInteger(null)).toBe(false)
+  expect(isInteger(true)).toBe(false)
+  expect(isInteger(false)).toBe(false)
+  expect(isInteger({})).toBe(false)
+  expect(isInteger([])).toBe(false)
+  expect(isInteger('')).toBe(false)
+  expect(isInteger(' ')).toBe(false)
+  expect(isInteger('true')).toBe(false)
+  expect(isInteger('false')).toBe(false)
+  expect(isInteger('1')).toBe(false)
+  expect(isInteger('0')).toBe(false)
+  expect(isInteger(1.1)).toBe(false)
+  expect(isInteger(0.1)).toBe(false)
+  expect(isInteger(-1.1)).toBe(false)
+})

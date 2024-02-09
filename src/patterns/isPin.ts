@@ -1,13 +1,19 @@
 const pattern = {
   4: /^[0-9]{4}$/,
   6: /^[0-9]{6}$/,
-};
+}
 
-const isPin = (value: string | null, pinLength: keyof typeof pattern): boolean | undefined => {
-  const patternCase = new RegExp(pattern[pinLength]);
-  if (value === null || patternCase.test('')) return undefined;
+const isPin = (
+  value?: any,
+  pinLength?: keyof typeof pattern
+): boolean | undefined => {
+  if (!value) return false
 
-  return patternCase.test(value);
-};
+  if (pinLength && pattern[pinLength]) {
+    return pattern[pinLength].test(value)
+  }
 
-export default isPin;
+  return pattern[4].test(value) || pattern[6].test(value)
+}
+
+export default isPin

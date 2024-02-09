@@ -1,10 +1,28 @@
-import isFloat from '../src/patterns/isFloat';
+import isFloat from '../src/patterns/isFloat'
 
 it('should return true for valid float values', () => {
-  expect(isFloat('1.0')).toBe(true);
-  expect(isFloat('1.1')).toBe(true);
-  expect(isFloat('1.12')).toBe(true);
-  expect(isFloat('1.123')).toBe(true);
-  expect(isFloat('1.1234')).toBe(true);
-  expect(isFloat('1.12345')).toBe(true);
-});
+  expect(isFloat('1.0')).toBe(true)
+  expect(isFloat('1.1')).toBe(true)
+  expect(isFloat('1.12')).toBe(true)
+  expect(isFloat('1.123')).toBe(true)
+  expect(isFloat('1.1234')).toBe(true)
+  expect(isFloat('1.12345')).toBe(true)
+  expect(isFloat('')).toBe(false)
+  expect(isFloat(' ')).toBe(false)
+  expect(isFloat('true')).toBe(false)
+  expect(isFloat('false')).toBe(false)
+  expect(isFloat()).toBe(false)
+  expect(isFloat(null)).toBe(false)
+  expect(isFloat(true)).toBe(false)
+  expect(isFloat(false)).toBe(false)
+  expect(isFloat({})).toBe(false)
+  expect(isFloat([])).toBe(false)
+  expect(isFloat(1)).toBe(true)
+  expect(isFloat(0)).toBe(true)
+  expect(isFloat('1')).toBe(false)
+  expect(isFloat('0')).toBe(false)
+  expect(isFloat('1.')).toBe(false)
+  expect(isFloat('.1')).toBe(false)
+  expect(isFloat('1.1.')).toBe(false)
+  expect(isFloat('1.1.1')).toBe(false)
+})

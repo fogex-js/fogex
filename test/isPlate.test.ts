@@ -1,6 +1,21 @@
-import isPlate from '../src/patterns/isPlate';
+import isPlate from '../src/patterns/isPlate'
 
 it('should return true for plate format', () => {
-  expect(isPlate('01XX111', 'TR')).toBe(true);
-  expect(isPlate('BXX-123', 'US')).toBe(true);
-});
+  expect(isPlate('01XX111', 'TR')).toBe(true)
+  expect(isPlate('BXX-123', 'US')).toBe(true)
+  expect(isPlate('BXX123', 'US')).toBe(true)
+  expect(isPlate('BXX-1234', 'US')).toBe(false)
+  expect(isPlate('BXX 1234', 'US')).toBe(false)
+  expect(isPlate('')).toBe(false)
+  expect(isPlate()).toBe(false)
+  expect(isPlate(null)).toBe(false)
+  expect(isPlate(true)).toBe(false)
+  expect(isPlate(false)).toBe(false)
+  expect(isPlate({})).toBe(false)
+  expect(isPlate([])).toBe(false)
+  expect(isPlate(1)).toBe(false)
+  expect(isPlate(0)).toBe(false)
+  expect(isPlate('1')).toBe(false)
+  expect(isPlate('0')).toBe(false)
+  expect(isPlate('1.1')).toBe(false)
+})

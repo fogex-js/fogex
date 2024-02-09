@@ -1,6 +1,6 @@
 {
   "name": "fogex",
-  "version": "0.0.21",
+  "version": "0.0.23",
   "description": "A JavaScript library for quickly and easily testing the validity or invalidity of a value.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,8 @@
     "test": "jest",
     "build": "tsc",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
-    "pre-publish": "npm run build"
+    "pre-publish": "npm run build",
+    "coverage": "jest --coverage"
   },
   "lint-staged": {
     "**/*.{js,json}": [

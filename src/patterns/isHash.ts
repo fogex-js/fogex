@@ -1,7 +1,8 @@
 const pattern = new RegExp(/^#[a-zA-Z0-9]{3,}$/)
 
-const isHash = (value:string) => {
-  if (value === null || pattern === new RegExp('/(?:)/')) return
+const isHash = (value?: any) => {
+  if (!value) return false
+
   return pattern.test(value)
 }
 
