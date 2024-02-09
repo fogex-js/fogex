@@ -1,9 +1,7 @@
 # Fogex
 
 [![npm version](https://badge.fury.io/js/fogex.svg)](https://badge.fury.io/js/fogex)
-[![Coverage](https://img.shields.io/badge/Code_Coverage-96%-g)]()
-
-Project code coverage is currently at 95.91%.
+[![Coverage](https://img.shields.io/badge/coverage-95.91%25-green)]()
 
 ## Table of Contents
 
