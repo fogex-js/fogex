@@ -41,11 +41,11 @@ yarn add fogex
 
 `isEmail`
 
-```
+```JavaScript
 import { isEmail } from 'fogex'
 ```
 
-```
+```JavaScript
 isEmail('test@test.com') // true
 isEmail('test@test') // false
 ```
@@ -54,11 +54,11 @@ isEmail('test@test') // false
 
 ###### Use with parameters
 
-```
+```JavaScript
 import { isPhoneNumber } from 'fogex'
 ```
 
-```
+```JavaScript
 isPhoneNumber('+11234567890', 'US') // true
 isPhoneNumber('1234567890', 'US') // true
 isPhoneNumber('+905555555555', 'US') // true
@@ -66,27 +66,26 @@ isPhoneNumber('05555555555', 'US') // true
 isPhoneNumber('5555555555', 'US') // true
 ```
 
-`isPin`
+`isPin `
 
-```
+```JavaScript
 import { isPin } from 'fogex'
 ```
 
-```
+```JavaScript
 isPin('1234', '4') // true
 isPin('123456', '6') // true
-
 ```
 
 `isCreditCard`
 
-```
+```JavaScript
 import { isCreditCard } from 'fogex'
 ```
 
 ###### Default
 
-```
+```JavaScript
 // Accepts all card types
 isCreditCard('XXXX XXXX XXXX XXXX') // true
 isCreditCard('XXXXXXXXXXXXXXXX') // true
@@ -94,19 +93,19 @@ isCreditCard('XXXXXXXXXXXXXXXX') // true
 
 ###### Use with parameters
 
-```
+```JavaScript
 isCreditCard('XXXX XXXX XXXX XXXX', 'VISA') // true
 isCreditCard('XXXXXXXXXXXXXXXX', 'VISA') // true
 ```
 
-```
+```JavaScript
 isCreditCard('XXXX XXXX XXXX XXXX', 'MASTER') // true
 isCreditCard('XXXXXXXXXXXXXXXX', 'MASTER') // true
 ```
 
 ### 2) Use with `customPattern` function
 
-```
+```JavaScript
 import { customPattern } from 'fogex'
 ```
 
@@ -122,18 +121,18 @@ import { customPattern } from 'fogex'
 
 Example
 
-```
+```JavaScript
 customPattern('aA#!', 8, 'aA1!1234') //true
 customPattern('aA?#!', 5, 'aa11\*') // true
 ```
 
 ### 3) Use with `GeneratorPattern` function
 
-```
+```JavaScript
 import { GeneratorPattern } from 'fogex'
 ```
 
-```
+```JavaScript
 const value = 'qweR123!'
 
 const options = {
@@ -153,7 +152,7 @@ console.log(isValid) // true
 
 ###### or
 
-```
+```JavaScript
 const validator = new GeneratorPattern({
   minLength: 6,
   maxLength: 12,
