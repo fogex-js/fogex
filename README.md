@@ -8,16 +8,14 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
-  - [1) Pre-defined regex functions](#1-use-with-pre-defined-regex-functions)
-  - [2) customPattern function](#2-use-with-custompattern-function)
-  - [3) GeneratorPattern class](#3-use-with-generatorpattern-function)
+  - [1) Pre-defined Regex Functions](#1-use-with-pre-defined-regex-functions)
+  - [2) customPattern Function](#2-use-with-custompattern-function)
+  - [3) GeneratorPattern Class](#3-use-with-generatorpattern-function)
 - [Pre-defined Regex Functions](#pre-defined-regex-functions)
 - [Contribution](#contribution)
 - [License](#mit-license)
 
 ## Introduction
-
-This package is still in the beta stage, please use it carefully.
 
 I abbreviated the expression "Form Regular Expression" as "FOGEX" to give the library its name.
 
@@ -27,12 +25,6 @@ A JavaScript library for quickly and easily testing the validity or invalidity o
 
 ```
 npm install fogex
-```
-
-or
-
-```
-yarn add fogex
 ```
 
 ## Usage
@@ -52,7 +44,7 @@ isEmail('test@test') // false
 
 `isPhoneNumber`
 
-###### Use with parameters
+###### Use with parameter
 
 ```JavaScript
 import { isPhoneNumber } from 'fogex'
@@ -67,6 +59,8 @@ isPhoneNumber('5555555555', 'US') // true
 ```
 
 `isPin `
+
+###### Use with parameter
 
 ```JavaScript
 import { isPin } from 'fogex'
@@ -91,7 +85,7 @@ isCreditCard('XXXX XXXX XXXX XXXX') // true
 isCreditCard('XXXXXXXXXXXXXXXX') // true
 ```
 
-###### Use with parameters
+###### Use with parameter
 
 ```JavaScript
 isCreditCard('XXXX XXXX XXXX XXXX', 'VISA') // true
@@ -148,22 +142,6 @@ const validator = new GeneratorPattern(options)
 const isValid = validator.validate(value)
 
 console.log(isValid) // true
-```
-
-###### or
-
-```JavaScript
-const validator = new GeneratorPattern({
-  minLength: 6,
-  maxLength: 12,
-  lowerCase: true,
-  upperCase: true,
-  number: true,
-  specialCharacter: true,
-})
-
-const isValid = validator.validate(value)
-console.log(isValid)
 ```
 
 ## Pre-defined Regex Functions
