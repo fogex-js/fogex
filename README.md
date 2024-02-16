@@ -20,7 +20,6 @@
 This package is still in the beta stage, please use it carefully.
 
 I abbreviated the expression "Form Regular Expression" as "FOGEX" to give the library its name.
-
 A JavaScript library for quickly and easily testing the validity or invalidity of a value.
 
 ## Installation
