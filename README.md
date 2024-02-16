@@ -58,7 +58,7 @@ isPhoneNumber('05555555555', 'US') // true
 isPhoneNumber('5555555555', 'US') // true
 ```
 
-`isPin `
+`isPin`
 
 ###### Use with parameter
 
