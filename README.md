@@ -36,7 +36,7 @@ yarn add fogex
 
 ## Usage
 
-### 1) Use with pre-defined regex functions
+### 1) Use with pre-defined validation functions
 
 `isEmail`
 
@@ -125,7 +125,7 @@ customPattern('aA#!', 8, 'aA1!1234') //true
 customPattern('aA?#!', 5, 'aa11\*') // true
 ```
 
-### 3) Use with `GeneratorPattern` function
+### 3) Use with `GeneratorPattern` Class
 
 ```JavaScript
 import { GeneratorPattern } from 'fogex'
